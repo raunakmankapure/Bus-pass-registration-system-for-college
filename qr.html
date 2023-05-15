@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate QR Code for Payment</title>
+  <script src="qrcode.min.js"></script>
+</head>
+<body>
+  <h1>Generate QR Code for Payment</h1>
+  <form>
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" value="">
+    <button id="generateQrCodeBtn">Generate QR Code</button>
+  </form>
+  <br>
+  <canvas id="qrCodeCanvas"></canvas>
+  <script>
+    var generateQrCodeBtn = document.getElementById("generateQrCodeBtn");
+    var qrCodeCanvas = document.getElementById("qrCodeCanvas");
+    
+    generateQrCodeBtn.addEventListener("click", function() {
+      var price = document.getElementById("price").value;
+      var qrCode = new QRCode(qrCodeCanvas, {
+        text: "price:" + price,
+        width: 256,
+        height: 256
+      });
+    });
+  </script>
+</body>
+</html>

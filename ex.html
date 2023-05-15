@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script src="dist/jspdf.min.js"></script>
+
+</head>
+<body>
+
+  <fieldset>
+    <button id="download-pass-btn" class="btn">Download Pass PDF</button>
+  </fieldset>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script>
+      // Add event listener to download button
+      const downloadBtn = document.getElementById('download-pass-btn');
+      downloadBtn.addEventListener('click', () => {
+          // Retrieve data from Google Sheets API
+          const spreadsheetId = "1vl3dHw52j1VLfSmATzMECVVLIbP09qsUIwvHnhvVRNs";
+          const sheetName = "Sheet1";
+          const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=AIzaSyDGNbGgQ_Yn1zBfZdTBaLEoJn_ixoMWDhU`;
+          fetch(url)
+              .then(response => response.json())
+              .then(data => {
+                  // Extract the latest entry from the data array
+                  const latestEntry = data.values[data.values.length - 1];
+
+                  // Generate PDF document using jsPDF library
+                  const doc = new jsPDF();
+                  doc.text(`name: ${latestEntry[0]}`, 10, 10);
+                  doc.text(`phoneno: ${latestEntry[1]}`, 10, 20);
+                  // Add more data fields as needed
+                  // ...
+
+                  // Download PDF document
+                  doc.save('bus-pass.pdf');
+              });
+      });
+  </script>
+
+
+
+  
+</body>
+</html>
