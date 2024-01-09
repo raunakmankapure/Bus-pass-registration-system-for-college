@@ -39,8 +39,14 @@ Then copy the following code:
  
  Step5:
  DONE.
+
+
+ Output:
  
- 
- 
-                               
-                              
+![index](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/0c464286-80e1-415a-9a61-36bbbef9adb0)
+![2](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/45006d25-7787-434f-ba7e-9982871d421b)
+![3](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/88e320d1-c555-4432-bde2-f23a338f5a38)
+![4](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/c8265834-4b42-4f0e-a514-31e6acfdb963)
+![5](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/957a86a5-075c-45c9-9509-216c974b9aef)
+![6](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/c2f8e6ed-789c-42a9-9a00-bbc10837cbcf)
+![index](https://github.com/raunakmankapure/Bus-pass-registration-system-for-college/assets/113294200/7aec8205-7dbc-43f7-ba19-55665dde41cb)
